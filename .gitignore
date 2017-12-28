@@ -1,0 +1,7 @@
+*
+!*.yaml
+!scenes
+!hadaemon
+!.gitignore
+secrets.yaml
+known_devices.yaml

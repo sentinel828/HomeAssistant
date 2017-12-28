@@ -1,0 +1,39 @@
+  - alias: Morning 
+    trigger:
+      platform: time
+      at: '06:00:00'
+    action:
+      service: input_select.select_option
+      data: 
+        entity_id: input_select.house_mode
+        option: Morning
+
+  - alias: Day
+    trigger:
+      platform: time
+      at: '09:00:00'
+    action:
+      service: input_select.select_option
+      data:
+        entity_id: input_select.house_mode
+        option: Day
+
+  - alias: Evening
+    trigger:
+      platform: time
+      at: '17:00:00'
+    action:
+      service: input_select.select_option
+      data:
+        entity_id: input_select.house_mode
+        option: Evening
+
+  - alias: Night
+    trigger:
+      platform: time
+      at: '22:00:00'
+    action:
+      service: input_select.select_option
+      data:
+        entity_id: input_select.house_mode
+        option: Night

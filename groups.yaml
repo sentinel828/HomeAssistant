@@ -1,0 +1,84 @@
+#default_view:
+#  view: yes
+#  entities:
+#    - group.locks
+#    - group.lights
+#    - group.fans
+#    - sun.sun
+#    - sensor.speedtest_ping
+#    - sensor.speedtest_download
+#    - sensor.speedtest_upload
+
+living_room_view:
+  name: Living Room
+  view: yes
+  entities:
+    - group.living_room_lights
+
+master_bedroom_view:
+  name: Master Bedroom
+  view: yes
+  entities:
+    - group.master_bedroom
+
+darksky_view:
+  name: Darksky Weather
+  view: yes
+  entities:
+    - group.darksky
+
+darksky:
+  name: Darksky Weather
+  entities:
+    - sensor.dark_sky_summary
+    - sensor.dark_sky_icon
+    - sensor.dark_sky_precip
+    - sensor.dark_sky_precip_intensity
+    - sensor.dark_sky_precip_probability
+    - sensor.dark_sky_temperature
+    - sensor.dark_sky_wind_speed
+    - sensor.dark_sky_cloud_coverage
+    - sensor.dark_sky_humidity
+    - sensor.dark_sky_visibility
+    - sensor.dark_sky_minutely_summary
+    - sensor.dark_sky_hourly_summary
+    - sensor.dark_sky_daily_summary
+    - sensor.dark_sky_daily_high_temperature
+    - sensor.dark_sky_daily_low_temperature
+
+locks:
+  name: Locks
+  entities:
+    - lock.front_door_lock
+    - lock.garage_door_lock
+
+lights:
+  name: Lights
+  entities:
+    - switch.living_room_lamp
+    - light.loveseat_lamp
+    - light.brians_corner_lamp
+    - light.foyer_light
+    - light.mbr__nightstand_lamps
+    - switch.front_door__porch_light
+
+fans:
+  name: Ceiling Fans
+  entities:
+    - switch.mbr_ceiling_fan
+
+living_room_lights:
+  name: Lights
+  entities:
+    - switch.living_room_lamp
+    - light.loveseat_lamp
+    - light.brians_lamp
+    - light.wendys_lamp
+
+master_bedroom:
+  name: Master Bedroom
+  control: hidden
+  entities:
+    - switch.mbr_ceiling_fan
+    - light.brians_nightstand
+    - light.wendys_nightstand
