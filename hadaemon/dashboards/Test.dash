@@ -1,0 +1,125 @@
+title: Kitchen Panel
+widget_dimensions: [151, 140]
+widget_size: [1, 1]
+widget_margins: [8, 8]
+columns: 8
+global_parameters:
+    use_comma: 0
+    precision: 1
+    use_hass_icon: 1
+
+layout:
+    - spacer, spacer, weather(2x2), brian_presence, brian_home, wendy_home, all_lights
+    - lr_corner, loveseat_lamp, brian_sensor, spacer, spacer, front_door_lock
+    - brians_corner, wendys_lamp, spacer, switch.porch_lights, spacer, spacer, spacer, garage_door_lock
+    - 
+    - load_main_panel, clock(2x1)
+
+weather:
+    widget_type: weather
+    units: "&deg;F"
+    widget_style: "font-size: 125%"
+
+brian_presence:
+    title: Brian
+    widget_type: device_tracker
+    device: brian
+    icon_on: fa-male
+    icon_off: fa-male
+    icon_style_active: "color: blue"
+    widget_style: "font-size 125%"
+
+brian_home:
+    title: Brian
+    widget_type: binary_sensor
+    entity: binary_sensor.brian_home
+    icon_on: fa-male
+    icon_off : fa-male
+    icon_style_active: "color: blue"
+    widget_style: "font-size: 125%"
+
+wendy_home:
+    title: Wendy
+    widget_type: binary_sensor
+    entity: binary_sensor.wendy_home
+    icon_on: fa-female
+    icon_off: fa-female
+    icon_style_active: "color: pink"
+    widget_style: "font-size: 125%"
+
+emilei_home:
+    title: Emilei
+    widget_type: binary_sensor
+    entity: binary_sensor.emilei_home
+    icon_on: fa-female
+    icon_off: fa-female
+    icon_style_active: "color: pink"
+    widget_style: "font-size: 125%"
+
+all_lights:
+    title: All Lights
+    widget_type: label
+    title: All Lights
+    widget_style: "font-size: 125%"
+
+lr_corner: 
+    title: Couch Lamp
+    widget_type: light
+    entity: light.lr_corner_lamp
+    icon_on: mdi-lamp
+    icon_off: mdi-lamp
+    widget_style: "font-size: 125%"
+
+loveseat_lamp:
+    title: Loveseat Lamp
+    widget_type: light
+    entity: light.loveseat_lamp
+    icon_on: mdi-lamp
+    icon_off: mdi-lamp
+    widget_style: "font-size: 125%"
+
+brian_sensor:
+    title: Brian
+    widget_type: sensor
+    entity: device_tracker.brian
+
+front_door_lock:
+    widget_type: lock
+    entity: lock.front_door_lock
+    title: Front Door
+    icon_style_inactive: "color: green"
+    widget_style: "font-size: 125%"
+
+brians_corner:
+    title: Brian's Lamp
+    widget_type: light
+    entity: light.corner_lamp
+    icon_on: mdi-lamp
+    icon_off: mdi-lamp
+    widget_style: "font-size: 125%"
+
+wendys_lamp:
+    title: Wendy's Lamp
+    widget_type: light
+    entity: light.wendys_lamp
+    icon_on: mdi-lamp
+    icon_off: mdi-lamp
+    widget_style: "font-size: 125%"
+
+garage_door_lock:
+    widget_type: lock
+    entity: lock.garage_door_lock
+    title: Garage Door
+    icon_style_inactive: "color: green"
+    widget_style: "font-size: 125%"
+
+load_main_panel:
+    widget_type: navigate
+    title: Main Panel
+    icon_active: fa-home
+    icon_inactive: fa-home
+    url: /MainPanel
+    widget_style: "font-size 125%"
+
+clock:
+    widget_type: clock
