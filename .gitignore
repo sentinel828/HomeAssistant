@@ -19,3 +19,4 @@ home-assistant.*
 ._.DS_Store
 .vscode
 hadaemon/compiled/
+appdaemon.yaml
