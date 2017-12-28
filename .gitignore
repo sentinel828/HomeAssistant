@@ -1,7 +1,7 @@
 *
 !*.yaml
 !scenes
-!hadaemon/dashboards/*.dash
+!hadaemon
 !.gitignore
 secrets.yaml
 known_devices.yaml
